@@ -1,0 +1,23 @@
+{
+  "name": "@qnpm/numbertochinese",
+  "version": "1.0.0",
+  "description": "transfer number to Chinese",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --harmony test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylinzhao/numbertochinese.git"
+  },
+  "keywords": [
+    "number",
+    "chinese"
+  ],
+  "author": "kylin.zhao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kylinzhao/numbertochinese/issues"
+  },
+  "homepage": "https://github.com/kylinzhao/numbertochinese#readme"
+}
