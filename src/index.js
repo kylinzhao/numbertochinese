@@ -61,12 +61,18 @@ var mixChinese = function(number,size,power,miss){
     if(number < pow) return number;
     var divided = number/pow
     var left = Math.floor(divided),
-        right = divided - left,
+        right = Math.round( (divided - left) * Math.pow(10,size) ) / Math.pow(10,size), //此处需解决浮点数运算问题
         middle = '';
 
     if(right){
         middle = '.'
-        right = right.toString().match(/\d+/g)[1].slice(0,2);
+        right = right.toString().match(/\d+/g)
+
+        if(right.length > 1){
+            right = right[1].slice(0,2);
+        }else{
+            right = '00';
+        }
 
         var isAllZeroReg = new RegExp("0{" + size + "}",'g');
         var isAllZero = right.match(isAllZeroReg);
